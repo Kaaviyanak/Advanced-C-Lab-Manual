@@ -13,11 +13,20 @@ Algorithm:
  
 Program:
 
-//type your code here
+```
+int stack[40],top,i;
+void display()
+{
+   for(i=top;i>=0;i--)
+   {
+      printf("%d\n",stack[i]);
+   }
+}
+```
 
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/2d2dc82c-9928-4f8f-a07c-9a4c31f67028)
 
 
 
@@ -36,11 +45,26 @@ Algorithm:
  
 Program:
 
-//type your code here
+```
+int size=3,top=1;
+float stack[40];
+void push (float data)
+{
+   if (top==size-1 )
+   {
+      printf("stack is full\n");
+   }
+   else
+   {
+      top ++;
+      stack[top] = data;
+   }
+}
+```
 
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/ebcbb468-1e9b-4f3d-903b-9156c1269bb2)
 
 
 
@@ -62,11 +86,28 @@ Algorithm:
  
 Program:
 
-//type your code here
+```
+int queue[50], rear, front,i;
+void display()
+{
+   if(front==-1)
+   {
+      printf("No elements to display");
+   }
+   else
+   {
+     for(i=front;i<=rear;i++)
+     {
+       printf("%d ",queue[i]);
+     }
+   }
+}
+```
+
 
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/2d892bf2-90fc-4fd4-95ee-0c6cfcfa51e5)
 
 
 Result:
@@ -86,11 +127,26 @@ Algorithm:
 
 Program:
 
-//type your code here
+```
+int size=4, rear=-1, front=-1;
+float queue[50];
+void enqueue(float data)
+{
+   if(rear<size)
+   {
+     if(front==-1)
+     {
+        front=0;
+     }
+     rear=rear+1;
+     queue[rear]=data;
+    }
+}
+```
 
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/7bc7dc0b-c050-4d3f-ac75-6cdc64c2fbd3)
 
 Result:
 Thus, the program to insert elements in queue using array is verified successfully.
@@ -121,11 +177,24 @@ o	After deletion, check if the front pointer has passed the rear pointer (front 
 
 Program:
 
-//type your code here
+```
+int front, rear;
+void dequeue()
+{
+    if(front==-1&&rear==-1)
+    printf("Queue Underflow.");
+    else if(front==rear)
+    front=rear=-1;
+    else
+    {
+        front=front+1;
+    }
+}
+```
 
 Output:
+![image](https://github.com/user-attachments/assets/5de5ee70-9217-4f6a-b3cd-7f800bafd855)
 
-//paste your output here
 
 
 Result:
